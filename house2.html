@@ -782,7 +782,7 @@ function getPriceDetails() {
           return;
         }
         checkin = start; checkout = end;
-        selectedDatesEl.innerText = "Заезд: " + formatDate(checkin) + " (после 16:00)\nВыезд: " + formatDate(checkout) + " (до 12:00)";
+        selectedDatesEl.innerText = "Заезд: " + formatDate(checkin) + " (после 16:00)\nВыезд: " + formatDate(checkout) + " (до 13:00)";
         updateBookingState(); updateResetVisibility();
         queueMicrotask(updateCheckoutLimits);
         paintCheckout();
@@ -811,7 +811,7 @@ function getPriceDetails() {
       if (!busyNightSet.has(toYMD(end)) || !isValidStay(checkin, end)) return;
       event.preventDefault(); event.stopPropagation();
       checkout = end;
-      selectedDatesEl.innerText = "Заезд: " + formatDate(checkin) + " (после 16:00)\nВыезд: " + formatDate(checkout) + " (до 12:00)";
+      selectedDatesEl.innerText = "Заезд: " + formatDate(checkin) + " (после 16:00)\nВыезд: " + formatDate(checkout) + " (до 13:00)";
       updateBookingState(); updateResetVisibility();
       updateCheckoutLimits();
       paintCheckout();
